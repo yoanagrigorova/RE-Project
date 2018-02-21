@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="index.js"></script>
+    <script src="pieChart.js"></script>
+    <script src="barChart.js"></script>
+    <script src="lineChart.js"></script>
+    <script src="multilineChart.js"></script>
+    <script src="stackedBars.js"></script>
+    <title>Document</title>
+    <style>
+        #chart div {
+            font: 10px sans-serif;
+            background-color: steelblue;
+            text-align: right;
+            padding: 3px;
+            margin: 1px;
+            color: white;
+        }
+        
+        #dashboard {
+            width: 320px;
+            border: 1px solid black;
+        }
+        
+        p {
+            text-align: center;
+        }
+        
+        .line {
+            fill: none;
+            stroke: steelblue;
+            stroke-width: 2px;
+        }
+        
+        #pie {
+            position: relative;
+        }
+        
+        .tooltip {
+            position: absolute;
+            background: #eee;
+            color: #333;
+            display: none;
+            font-size: 12px;
+            padding: 5px;
+            text-align: center;
+            width: 80px;
+            z-index: 10;
+        }
+        
+        div.tooltip1 {
+            position: absolute;
+            text-align: center;
+            width: 30px;
+            height: 15px;
+            padding: 5px;
+            font: 12px sans-serif;
+            background: lightsteelblue;
+            border: 0px;
+            border-radius: 8px;
+            pointer-events: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="charts" id="pie"></div>
+    <div class="charts" id="chart"></div>
+    <div class="charts" id="line"></div>
+    <div class="charts" id="multiline"></div>
+    <div class="charts" id="stackedBars"></div>
+
+</body>
+
+</html>
