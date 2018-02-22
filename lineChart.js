@@ -9,8 +9,8 @@ document.addEventListener("DOMContentLoaded", function() {
     ];
 
     var margin = { top: 50, right: 20, bottom: 30, left: 50 },
-        width = 500 - margin.left - margin.right,
-        height = 400 - margin.top - margin.bottom,
+        width = 600 - margin.left - margin.right,
+        height = 450 - margin.top - margin.bottom,
         padding = 10;
 
     var parseTime = d3.timeParse("%Y");
@@ -23,7 +23,6 @@ document.addEventListener("DOMContentLoaded", function() {
         .y(function(d) { return y(d.value); });
 
     var svg = d3.select("#line").append("svg")
-        .style('background', '#dff0d8')
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
         .append("g")

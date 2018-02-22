@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var container = d3.select("#chart");
 
     var margin = { top: 20, right: 20, bottom: 10, left: 50 },
-        width = 500 - margin.left - margin.right,
+        width = 600 - margin.left - margin.right,
         height = 400 - margin.top - margin.bottom;
     var title = 20;
 
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
     x.domain(data.map(function(d) { return d.year; }));
     y.domain([0, d3.max(data, function(d) { return d.value; })]);
 
-    var svg = container.append("svg").style('background', '#dff0d8');
+    var svg = container.append("svg");
     svg.attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom + title)
         .append("g")

@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     var legendHeight = 50;
     var margin = { top: 40, right: 20, bottom: 30, left: 50 },
-        width = 500 - margin.left - margin.right,
+        width = 600 - margin.left - margin.right,
         height = 400 - margin.top - margin.bottom;
 
     var x = d3.scaleTime().range([10, width]);
@@ -28,7 +28,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 
     var svg = d3.select("#multiline").append("svg")
-        .style('background', '#dff0d8')
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom + legendHeight)
         .append("g")

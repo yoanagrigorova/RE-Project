@@ -13,11 +13,11 @@ document.addEventListener("DOMContentLoaded", function() {
     ];
 
     var margin = { top: 30, right: 20, bottom: 10, left: 50 },
-        width = 500 - margin.left - margin.right,
-        height = 400 - margin.top - margin.bottom,
+        width = 600 - margin.left - margin.right,
+        height = 420 - margin.top - margin.bottom,
         radius = Math.min(width, height) / 2;
 
-    var svg = d3.select("#pie").append("svg").style('background', '#dff0d8')
+    var svg = d3.select("#pie").append("svg")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
         .append('g')
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     path.on("mousemove", function(d) {
-        tooltip.style("left", d3.event.clientX + "px").style("top", d3.event.clientY + "px");
+        tooltip.style("left", (d3.event.clientX - 50) + "px").style("top", (d3.event.clientY - 20) + "px");
     })
     path.on('mouseout', function() {
         tooltip.style('display', 'none');
