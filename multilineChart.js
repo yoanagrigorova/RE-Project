@@ -87,16 +87,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     svg.append("circle").attr("cx", margin.left)
         .attr("cy", height + margin.top + 5).style("fill", "red")
-        .attr("r", 5);
+        .attr("r", 8);
 
     svg.append("circle").attr("cx", width / 2)
         .attr("cy", height + margin.top + 5).style("fill", "blue")
-        .attr("r", 5);
+        .attr("r", 8);
 
     svg.append("text").attr("x", margin.left + 12).attr("y", height + margin.top + 10)
-        .style("font-size", "12px").text("Arizona Fatality Rate");
+        .style("font-size", "15px").text("Arizona Fatality Rate");
     svg.append("text").attr("x", (width / 2) + 12).attr("y", height + margin.top + 10)
-        .style("font-size", "12px").text("U.S Fatality Rate");
+        .style("font-size", "15px").text("U.S Fatality Rate");
 
     var az = new Array(data.length);
     var us = new Array(data.length);

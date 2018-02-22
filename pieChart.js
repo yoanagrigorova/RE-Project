@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     path.on("mousemove", function(d) {
-        tooltip.style("left", (d3.event.clientX - 50) + "px").style("top", (d3.event.clientY - 20) + "px");
+        tooltip.style("left", (d3.event.clientX - 50) + "px").style("top", (d3.event.clientY - 180) + "px");
     })
     path.on('mouseout', function() {
         tooltip.style('display', 'none');

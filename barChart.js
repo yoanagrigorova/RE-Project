@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     var margin = { top: 20, right: 20, bottom: 10, left: 50 },
         width = 600 - margin.left - margin.right,
-        height = 400 - margin.top - margin.bottom;
+        height = 450 - margin.top - margin.bottom;
     var title = 20;
 
     var max = data.reduce((a, b) => (a.value > b.value) ? a.value : b.value);
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
         .append("g")
         .attr("transform",
             "translate(" + margin.left + "," + margin.top + ")");
-    svg.selectAll("rect").data(data).enter().append("rect")
+    var bars = svg.selectAll("rect").data(data).enter().append("rect")
         .attr("x", function(d) { return x(d.year) + 60; })
         .attr("width", x.bandwidth())
         .attr("y", function(d) { return y(d.value) + (title * 2); })
@@ -58,4 +58,24 @@ document.addEventListener("DOMContentLoaded", function() {
         .style("font-size", "20px")
         .style("text-decoration", "underline")
         .text("Alcohol Related Crashes");
+
+    var div = d3.select("body").append("div")
+        .attr("class", "tooltip1")
+        .style("display", "none");
+
+    bars.on("mouseover", function(d) {
+            div.transition()
+                .duration(200)
+                .style("display", "block");
+            div.html(d.value);
+        })
+        .on("mousemove", function(d) {
+            div.style("left", (d3.event.pageX) + "px")
+                .style("top", (d3.event.pageY - 28) + "px");
+        })
+        .on("mouseout", function(d) {
+            div.transition()
+                .duration(500)
+                .style("display", "none");
+        });
 })

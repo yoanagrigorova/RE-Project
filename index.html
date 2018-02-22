@@ -19,29 +19,20 @@
         }
         
         .charts {
+            position: relative;
             background-color: white;
             display: inline-block;
             margin-left: 30px;
             margin-top: 20px;
         }
-        
-        #chart div {
+        /* #chart div {
             font: 10px sans-serif;
             background-color: steelblue;
             text-align: right;
             padding: 3px;
             margin: 1px;
             color: white;
-        }
-        
-        #dashboard {
-            width: 320px;
-            border: 1px solid black;
-        }
-        
-        p {
-            text-align: center;
-        }
+        } */
         
         .line {
             fill: none;
@@ -81,12 +72,12 @@
 </head>
 
 <body>
-    <div class="charts" id="pie"></div>
+    <div class="charts" id="stackedBars"></div>
     <div class="charts" id="chart"></div>
     <div class="charts" id="line"></div>
     <div class="charts" id="multiline"></div>
-    <div class="charts" id="stackedBars"></div>
-
+    <div class="charts" id="pie"></div>
+    <div class="charts" id="barsAndLines"></div>
 </body>
 
 </html>

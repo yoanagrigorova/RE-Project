@@ -74,17 +74,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
         .attr("transform", "translate(0," + (translateY + title) + ")")
         .call(d3.axisLeft(y));
 
-    svg.append("rect").style("fill", colors[0]).attr("width", 10).attr("height", 10)
+    svg.append("rect").style("fill", colors[0]).attr("width", 15).attr("height", 15)
         .attr("x", margin.left).attr("y", height + margin.top + title * 2);
 
     svg.append("text").attr("x", margin.left + 15).attr("y", height + margin.top + margin.bottom + title * 2)
-        .style("font-size", "12px").text("Urban Fatalities");
+        .style("font-size", "15px").text("Urban Fatalities");
 
-    svg.append("rect").style("fill", colors[1]).attr("width", 10).attr("height", 10)
+    svg.append("rect").style("fill", colors[1]).attr("width", 15).attr("height", 15)
         .attr("x", width / 2).attr("y", height + margin.top + title * 2);
 
     svg.append("text").attr("x", (width / 2) + 15).attr("y", height + margin.top + margin.bottom + title * 2)
-        .style("font-size", "12px").text("Rural Fatalities");
+        .style("font-size", "15px").text("Rural Fatalities");
 
     svg.append("text").attr("x", (width / 2))
         .attr("y", (margin.top / 2))
